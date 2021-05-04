@@ -13,7 +13,7 @@ No worries. It is easy to add an express server to an existing project.
 
 Create a new folder called `server` in the root of the project. Then create an `index.js` file inside the `server` folder and paste the following inside the `index.js`:
 
-```
+```js
 const express = require('express')
 const consola = require('consola')
 const { loadNuxt } = require('nuxt-start')
