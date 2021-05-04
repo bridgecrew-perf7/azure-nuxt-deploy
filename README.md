@@ -1,4 +1,4 @@
-### Deploy Nuxt on Azure Portal
+# Deploy Nuxt on Azure Portal
 How to deploy a Nuxt.js application on Azure Portal.
 
 
