@@ -32,7 +32,7 @@ Then edit your nuxt.config.js:
 
 Before:
 
-```
+```js
 import pkg from './package'
 
 export default {
@@ -42,7 +42,7 @@ export default {
 
 After:
 
-```
+```js
 module.exports = {
 ... config
 }
