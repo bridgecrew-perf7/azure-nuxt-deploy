@@ -3,7 +3,11 @@
 These are the steps on how to deploy the application on the azure portal(https://portal.azure.com/#main)
 
 ## Set Up Backend
+Install nuxt-start
 
+```bash
+yarn add nuxt-start
+```
 Create a new folder called `server` in the root of the project. Then create an `index.js` file inside the `server` folder and paste the following inside the `index.js`:
 
 ```js
@@ -21,7 +25,7 @@ start()
 ```
 ## Update Package.Json
 Edit the start script to reflect the one below.
-```
+```json
 {
   "scripts": {
     "start": "node server/index.js",
@@ -51,7 +55,7 @@ module.exports = {
 ```
 ## Add Web.config
 On the root of your repository create a web.config file and add the code below.
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      This configuration file is required if iisnode is used to run node processes behind
@@ -129,7 +133,7 @@ On the Instance section make sure to:-
 
 ### Connect to Github Repository
 To connect the app to github you have to :-
-* Enable continous deployment *
+* Enable continous deployment.
 * Connect the github repository you want to deploy.
 
 ### Set Environmental Variables
