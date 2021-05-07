@@ -11,7 +11,16 @@ yarn add nuxt-start
 Create a new folder called `server` in the root of the project. Then create an `index.js` file inside the `server` folder and paste the following inside the `index.js`:
 
 ```js
+
 const {loadNuxt} = require('nuxt-start')
+/*
+  handle any uncaught exception that occurs during execution.
+  Without this the server will stop on error
+ */
+process.on('uncaughtException', function (err) {
+  // log the error on the console
+  console.log(err)
+})
 
 async function start() {
   const nuxt = await loadNuxt('start')
@@ -21,7 +30,10 @@ async function start() {
   console.log(`app listening on port ${port}`)
 }
 
-start()
+start().catch(
+  e => console.log(e)
+)
+
 ```
 ## Update Package.Json
 Edit the start script to reflect the one below.
